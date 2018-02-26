@@ -7,10 +7,7 @@ movies = db["Movies"]
 def parser(filename):
     doc = open(filename).read()
     jsonObject = json.loads(doc)
-    print doc
+    movies.insert_many(jsonObject)
+    #print doc
 
 parser("movies.json")
-    
-
-
-    
